@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-//import { sendError } from '../error-config';
-
 export default class ErrorBoundary extends Component {
   state = {
     hasError: false
@@ -9,7 +7,6 @@ export default class ErrorBoundary extends Component {
 
   componentDidCatch(error, info) {
     this.setState({ hasError: true });
- //   sendError.captureException(error, { extra: info })
   }
 
   render() {
